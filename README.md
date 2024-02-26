@@ -1,2 +1,3 @@
 # Biblioteca_de_arquivos
-Local por onde será arquivado todos os meus itens a respeito da faculdade para consultas em publico 
+Local por onde será arquivado todos os meus itens a respeito da faculdade para consultas em público.
+Para não haver problemas relacionados com as permissões em aplicativos de armazenamento em nuvem ou passar o mesmo arquivo para várias pessoas com o intuito de levar vírus para outros dispositivos de outras pessoas, a solução é criar uma pasta para todos visualizarem e pegar os seus materiais de acordo com a necessidade de conhecimento, originalmente este repositório seria privado, mas com a alta demanda o mesmo está aberto ao público em geral, qualquer dúvida poderá falar pelos canais de contato que estão na apresentação.
