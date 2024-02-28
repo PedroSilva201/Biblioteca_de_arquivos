@@ -12,4 +12,4 @@ Atualizações de 27 de fevereiro: Foram inseridos conteúdos referentes as disc
 
 Qulquer duvida de imediato poderá ser respondido por este formulário  <a href="https://docs.google.com/forms/d/e/1FAIpQLSe0_BBdMY4P-u1ZmF2lRc_1MupEfRDpzLO0CHs9ZsUy_5gM2w/viewform?usp=sf_link">Apenas informando seu nome e sua dúvida ou algo relacionado.</a>
 
-Disciplinas como Matemática Discreta e Metodologia da Pesquisa Cientifico Tecnológica já estão com TODOS OS ARQUIVOS INSERIDOS!!!
+Disciplinas como Matemática Discreta, Programação Linear e Aplicações e Metodologia da Pesquisa Cientifico Tecnológica já estão com TODOS OS ARQUIVOS INSERIDOS!!!
