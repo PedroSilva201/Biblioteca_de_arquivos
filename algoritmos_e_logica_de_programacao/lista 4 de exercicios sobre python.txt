@@ -1,0 +1,114 @@
+exercicio 1 codigo:
+
+>>> from random import randint
+>>> vetor = []
+>>> for k in range(10):
+...   vetor.append(randint(1, 100))
+...
+...
+>>> maior = menor = vetor[0]
+>>>
+>>> k = 1
+>>> while k < 10:
+...   if vetor[k] > maior:
+...     maior = vetor[k]
+...   if vetor[k] < menor:
+...     menor = veotr[k]
+...   k = k + 1
+...
+>>> print ('vetor:', vetor)
+vetor:[66, 64, 73, 22, 64, 92, 65, 17, 44, 97]
+>>> print ('maior: %d' %maior)
+maior: 97
+>>> print ('menor: %d' %menor)
+menor: 17
+
+exercicio 2 codigo:
+
+>>> import random
+>>>
+>>> vetor = []
+>>> for k in range(20):
+...   vetor.append(random.randint(1, 100))
+...
+>>> pares = []
+>>> impares = []
+>>> for x in vetor:
+...   if x % 2 == 0:
+...     pares.append(x)
+...   else:
+...     impares.append(x)
+...
+>>> print ('vetor', vetor)
+vetor [34, 61, 94, 38, 94, 78, 21, 53, 71, 61, 83, 92, 34, 93, 38, 63, 78, 46, 23, 94]
+>>> print ('pares', pares)
+pares [34, 94, 38, 94, 78, 92, 34, 38, 78, 46, 94]
+>>> print ('impares', impares)
+impares [61, 21, 53, 71, 61, 83, 93, 63, 23]
+
+exercicio 3 codigo:
+
+>>> from random import randint
+>>> v1 = []
+>>> v2 = []
+>>> v3 = []
+>>> for k in range(10):
+...   x = randint(1, 100)
+...   v1.append(x)
+...   v3.append(x)
+...   x = randint(1, 100)
+...   v2.append(x)
+...   v3.append(x)
+...
+>>> print('v1:', v1)
+v1: [8, 10, 33, 19, 15, 15, 51, 56, 27, 89]
+>>> print('v2;', v2)
+v2: [78, 5, 87, 61, 74, 54, 22, 33, 29, 27]
+>>> print('v3:', v3)
+v3: [8, 78, 10, 5, 33, 87, 19, 61, 15, 74, 15, 54, 51, 22, 56, 33, 27, 29, 89, 27]
+
+exercicio 4 codigo:
+
+>>> texto = '''the python software foundation and the global python community welcome and encourage partipation by everyone. our community is based on mutual respect,
+tolerance, and encouragement, and we are working to help each other live up to these principles. we want our community to be more diverse: whoever you are , and 
+whatever your background, we welcome you.'''.lower()
+>>> import string
+>>> for c in string.punctuation:
+...   texto = texto.replace(c, '')
+...
+>>> resp = []
+>>> for p in texto.split():
+...   if p[0] in'python' or p[-1] in 'python':
+...      res.append(p)
+...
+>>> print (resp)
+['the', 'python', 'foundation', 'the', 'python', 'community', 'partipation', 'by', 'our', 'community', 'on', 'respect', 'tolerance', 'encouragement', 'to', 
+'help', 'each', 'other', 'up' , 'to' ,'these',  'principles', 'want', 'our', 'community', 'to', 'you', 'your', 'you'] 
+>>> len (resp)
+29
+
+exercicio 5 codigo:
+
+>>> texto = '''the python software foundation and the global python community welcome and encourage partipation by everyone. our community is based on mutual respect,
+tolerance, and encouragement, and we are working to help each other live up to these principles. we want our community to be more diverse: whoever you are , and 
+whatever your background, we welcome you.'''.lower()
+>>> import string
+>>> for c in string.punctuation:
+...   texto = texto.replace(c, '')
+...
+>>> def pitonica(palavra):
+...   for letra in palavra:
+...     if letra in 'python':
+...       return True
+...   return False
+...
+>>> resp = []
+>>> for p in texto.split():
+...   if pitonica(p) and len(p) > 4:
+...     resp.append(p)
+...
+>>> print (resp)
+['python', 'software', 'foundation', 'global', 'python', 'community', 'welcome', 'encourage', 'partipation', 'everyone', 'community', 'mutual', 'respect', 'tolerance',
+'encouragement', 'working', 'other', 'these', 'principles', 'community', 'ehoever', 'whatever', 'background', 'welcome']
+>>> print (len(resp))
+24  

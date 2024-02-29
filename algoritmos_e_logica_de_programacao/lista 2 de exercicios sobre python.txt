@@ -1,0 +1,119 @@
+exercicio 1 codigo:
+>>> a = int(input('lado a: '))
+lado a: 9
+>>> b = int(input('lado b: '))
+lado b: 8
+>>> c = int(input('lado c: '))
+lado c: 9
+>>> if a > b + c or b > a + c or c > a + b:
+...  print ('nao pode ser um triangulo')
+...  print ('um dos lados e maior que a soma dos outros')
+... elif a == b == c:
+...  print ('equilatero')
+... elif a == b or b == c or a == c:
+...  print ('isoceles')
+... else:
+...  print ('escaleno')
+...
+isoceles
+
+exercicio 2 codigo:
+>>> a = int(input('ano: '))
+ano: 2016
+>>> if a % 4 == 0 and (a % 100 != 0 or a % 400 == 0):
+...  print ('bissexto')
+... else:
+...  print ('nao e bissexto')
+...
+bissexto
+
+exercicio 3 codigo:
+>>> peso = float(input('peso: '))
+peso: 77
+>>> if peso > 50:
+...  excesso = peso - 50
+...  multa = excesso * 4
+... else:
+...  multa = excesso = 0
+...
+>>> print ('multa de R$ %.2f' %multa)
+multa de R$ 108.00
+>>> print ('excesso: %.2f' %excesso)
+excesso: 27.00
+
+exercicio 4 codigo:
+>>> a = int(input('a: '))
+a: 9
+>>> b = int(input('b: '))
+b: 6
+>>> c = int(input('c: '))
+c: 3
+>>> if a > = b and a > = c :
+...  print('maior: %d' %a)
+... elif b > = c:
+...  print('maior: %d' %b)
+... else:
+...  print('maior: %d' %c)
+...
+maior: 9
+
+exercicio 5 codigo:
+>>> a = int(input('a: '))
+a : 98
+>>> b = int(input('b: '))
+b : 87
+>>> c = int(input('c: '))
+c :76
+>>> if a > = b and a > = c :
+...  print('maior: %d' %a)
+... elif b > = c:
+...  print('maior: %d' %b)
+... else:
+...  print('maior: %d' %c)
+...
+maior: 98
+>>> if a < = b and a < = c:
+...  print('menor: %d' %a)
+... elif b < = c:
+...  print('menor: %d' %b)
+... else:
+...  print('menor; %d' %c0
+...
+menor 76
+
+exercicio 6 codigo:
+>>> valor = float(input('valor por hora: '))
+valor por hora: 230
+>>> horas = int(input('horas trabalhadas: '))
+horas trabalhadas: 180
+>>> bruto = valor * horas
+>>> ir = bruto * 0.11
+>>> inss = bruto * 0.05
+>>> sind = bruto * 0.05
+>>> liquido = bruto - ir - inss - sind
+>>> print ('+salario bruto:\t\t R$ %10.2f' %bruto)
++salario bruto: R$ 41400.00
+>>> print ('-IR:\t\t\t R$ %10.2f' %ir)
+-IR: R$ 4554.00
+>>> print ('-INSS:\t\t\t R$ %10.2f' %inss)
+-INSS: 3312.00
+>>> print ('-sindicato:\t\t R$ %10.2f' %sind)
+-sindicato: R$ 2070.00
+>>> print ('salario liquido:\t R$ %10.2f' %liquido)
+salario liquido:  R$ 31464.00
+
+exercicio 7 codigo:
+>>> m = int(input('metros: '))
+metros: 466
+>>> if m % 54 == 0 :
+...  latas = m / 54
+... else:
+...  latas = int(m/54)+1
+...
+...
+>>> valor = latas * 80
+>>> print ('%d latas' %latas)
+9 latas
+>>> print ('total: R$ %2f' %valor)
+total: R$ 720.000000
+

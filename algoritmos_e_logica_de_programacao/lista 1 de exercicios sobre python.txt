@@ -1,0 +1,96 @@
+exercicio 1 codigo
+>>>valor1=int(input('digite o primeiro valor: '))
+digite o primeiro valor: 23
+>>>valor2=int(input('digite o segundo valor: '))
+digite o segundo valor: 45
+>>>print(valor1+valor2)
+68
+
+exercicio 2 codigo
+>>> m = int(input('metros: '))
+metros: 257
+>>> print ('milimetros: ',m*1000)
+milimetros: 257000
+
+exercicio 3 codigo
+>>> d = int( input ('dias: '))
+dias: 5
+>>> h = int( input ('horas: '))
+horas: 2
+>>> m = int( input ('minuntos: '))
+minuntos: 10
+>>> s = int( input ('segundos: '))
+segundos: 0
+>>> total = d*24*60*60+h*60*60+m*60+s
+>>> print (total)
+439800
+
+exercicio 4 codigo
+>>> s = float(input('salario: '))
+salario: 4713
+>>> p = float(input('porcentagem de aumento: '))
+porcentagem de aumento: 10
+>>> aumento = s*p/100
+>>> novo = s + aumento
+>>> print ('aumento :R$ %.2f' %aumento)
+aumento :R$ 471.30
+>>> print ('novo salario :R$ %.2f' %novo)
+novo salario :R$ 5184.30
+
+exercicio 5 codigo
+>>> m = float(input('preço da mercadoria: '))
+preço da mecardoria : 80
+>>> p = float(input('porcentagem de desconto: '))
+porcentagem de desconto: 50
+>>> desconto = m*p/100
+>>> novo = m - desconto
+>>> print('desconto: R$ %.2f' % desconto)
+desconto: R$ 40.00
+>>> print ('preço a pagar: R$ %.2f' %novo)
+preço a pagar: R$ 40.00
+
+exercicio 6 codigo
+>>> d = float(input('distancia em km: '))
+distancia em km: 190
+>>> v = float(input('velocidade media em km/h: '))
+velocidade media em km/h: 95
+>>> t = d/v
+>>> print('tempo aproximado em horas: %.1f' %t)
+tempo aproximado em horas: 2.0
+
+exercicio 7 codigo 
+>>> c = float(input('celsus: '))
+celsus: 30
+>>> f = 9*c/5+32
+>>> print ('%.2f fahrenheit' %f)
+86.00 fahrenheit
+
+exercicio 8 codigo
+>>> f = float(input(' fahrenheit: '))
+fahrenheit: 86
+>>> c = (f-32)*5/9
+>>> print ('%.2f celsus' %c)
+30.00 celsus
+
+exercicio 9 codigo 
+>>> km = float(input('km rodados: '))
+km rodados: 80
+>>> dias = int(input('dias: '))
+dias: 2
+>>> preço = 60*dias+0.15*km
+>>> print ('R$ %.2f' %preço)
+R$ 132.00
+
+exercicio 10 codigo
+>>> cigarros = int(input('cigarros por dia: '))
+cigarros por dia 40
+>>> anos = int(input('anos fumados: '))
+anos fumados: 40
+>>> total_cigarros = anos*365*cigarros
+>>> dias_perdidos = total_cigarros/144
+>>> print ('voce perdeu aproximadamente %.2f dias' %dias_perdidos)
+voce perdeu aproximadamente 4055.56 dia
+
+exercicio 11 codigo
+>>> print (len(str(2**1000000)))
+301030

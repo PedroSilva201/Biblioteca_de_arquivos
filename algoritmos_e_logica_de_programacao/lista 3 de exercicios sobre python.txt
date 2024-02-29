@@ -1,0 +1,119 @@
+exercicio 1 codigo:
+>>> nota = float(input('digite uma nota: '))
+digite uma nota: 10
+>>> while nota < 0 or nota > 10:
+...   print ('notas entre 0 e 10: ')
+...   nota = float(input('digite uma nota: '))
+...
+>>> 10
+10
+
+exercicio 2 codigo:
+>>> usuario = input('usuario: ')
+usuario: eu
+>>> senha = input('senha: ')
+senha: 2345
+>>> while usuario == senha:
+...   print('senha deve ser diferente do usuario')
+...   usuario = input('usuario: ')
+...   senha = input('senha: ')
+...
+>>> 2345
+2345
+
+exercicio 3 codigo:
+>>> a = 80000
+>>> b = 200000
+>>> anos = 0
+>>> while a<= b:
+...   a = a + a * 0.03
+...   b = b + b * 0.015
+...   anos = anos + 1
+...
+>>> print (anos)
+63
+
+exercicio 4 codigo:
+>>> n = int(input('N: '))
+N: 12
+>>> a, b = 1, 1
+>>> k = 1
+>>> while k <= n - 2:
+...   a, b = b, a + b
+...   k = k + 1
+...
+>>> print ('Fib(%d) = %d' %(n,b))
+Fib(12) = 144
+
+exercicio 5 codigo:
+>>> a = int(input('a: '))
+a: 45
+>>> b = int(input('b: '))
+b: 51
+>>>
+>>> while a % b != 0:
+... a, b = b, a % b
+...
+>>> print('mdc = %d' %b)
+mdc = 3
+
+
+
+exercicio 1 do desafio codigo:
+>>> n = int(input('N: '))
+N: 504
+>>> k = 0
+>>> while k * (k + 1) * (k + 2) < n:
+... k = k + 1
+...
+...
+>>> print (k * (k + 1) * (k + 2) == n )
+true
+
+exercicio 2 do desafio codigo:
+>>> conta = int(input('conta: '))
+conta: 105
+>>>pgto = int(input('pagamento: '))
+pagamento: 200
+>>> troco = pgto - conta
+>>> notas = [50,20,10,5,2,1]
+>>> for nota in notas:
+... while troco >= nota:
+...  print ('uma nota de %d' % nota)
+...  troco -= nota
+...
+uam nota de 50
+uma nota de 20
+uma nota de 20
+uma nota de 5
+
+exercicio 3 do desafio codigo:
+>>> n = int(input('numero: '))
+numero: 59
+>>> k = 1
+>>> divisores = 0
+>>> while k <= n:
+...  if n % k == 0:
+...   divisores = divisores + 1
+...  k = k + 1
+...
+>>> print(divisores == 2)
+true
+
+exercicio 4 do desafio codigo:
+>>> n = int(input('numero: '))
+numero: 545
+>>> for k in range(2, n):
+...  while n % k == 0:
+...   print (k)
+...   n = n / k
+...
+5
+109
+
+exercicio 5 do desafio codigo:
+>>> n = input('numero: ')
+numero: 1234567
+>>> n = n[: : -1]
+>>> print (n)
+7654321

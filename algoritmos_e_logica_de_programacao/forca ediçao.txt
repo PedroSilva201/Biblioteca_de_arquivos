@@ -1,0 +1,1028 @@
+FORMA
+#pedro
+forca = ['''
+     +-----------+
+                 |
+                 |
+                 |
+                 |
+                 |
+                 |
+================== ''','''
+     +-----------+
+     |           |
+                 |
+                 |
+                 |
+                 |
+                 |
+================== ''','''
+     +-----------+
+     |           |
+     O           |
+                 |
+                 |
+                 |
+                 |
+================== ''','''
+     +-----------+
+     |           |
+     O           |
+     |           |
+                 |
+                 |
+                 |
+================== ''','''
+     +-----------+
+     |           |
+     O           |
+    /|           |
+                 |
+                 |
+                 |
+================== ''','''
+     +-----------+
+     |           |
+     O           |
+    /|\          |
+                 |
+                 |
+                 |
+================== ''','''
+     +-----------+
+      |          |
+      O          |
+     /|\         |
+     /           |
+                 |
+                 |
+================== ''','''
+     +-----------+
+     |           |
+     O           |
+    /|\          |
+    / \          |
+                 |
+                 |
+================== ''']
+certas = erradas = ''
+import requests
+url = 'https://www.ime.usp.br/~pf/dicios/br-sem-acentos.txt'
+palavras = requests.get(url).text.lower().split()
+
+from random import choice
+def escolhe(): return choice(palavras)
+
+def desenha():
+    print(forca[len(erradas)])
+    for c in sorteada:
+        print (c if c in certas else '_', end = ' ')
+    print()
+
+from string import digits, punctuation
+def chute(letras):
+    while True:
+        x = input('chute uma letra: ').lower()
+        if x in letras:
+            print('repetiu letra')
+        elif x in digits + punctuation:
+            print('caracter invalido')
+        elif len(x) != 1:
+            print('somente uma letra')
+        else:
+            return x
+
+def jogar_novamente():
+    return input('deseja jogar novamente? (SN)').lower() == 's'
+
+def ganhou():
+    return set(sorteada) == set(certas)
+
+sorteada = escolhe()
+while True:
+    desenha()
+    x = chute(certas + erradas)
+    if x in sorteada: certas = certas + x
+    else: erradas = erradas + x
+    if len(erradas) == len(forca):
+        print(f'morreu, a palavra era {sorteada}')
+        if jogar_novamente():
+          certas = erradas = ''
+          sorteada = escolhe()
+        else: break
+    elif ganhou():
+        print(f'acertou a palavra {sorteada}')
+        if jogar_novamente():
+          certas = erradas = ''
+          sorteada = escolhe()
+        else: break 
+ 
+ RESOLUÇAO   
+
+ RESTART: C:/Users/User/AppData/Local/Programs/Python/Python37-32/teste de forca2.py 
+
+     +-----------+
+                 |
+                 |
+                 |
+                 |
+                 |
+                 |
+================== 
+_ _ _ _ _ _ _ _ _ _ 
+chute uma letra: a
+
+     +-----------+
+     |           |
+                 |
+                 |
+                 |
+                 |
+                 |
+================== 
+_ _ _ _ _ _ _ _ _ _ 
+chute uma letra: e
+
+     +-----------+
+     |           |
+     O           |
+                 |
+                 |
+                 |
+                 |
+================== 
+_ _ _ _ _ _ _ _ _ _ 
+chute uma letra: o
+
+     +-----------+
+     |           |
+     O           |
+                 |
+                 |
+                 |
+                 |
+================== 
+_ _ _ _ _ _ _ _ _ o 
+chute uma letra: i
+
+     +-----------+
+     |           |
+     O           |
+                 |
+                 |
+                 |
+                 |
+================== 
+_ i _ _ i _ i _ _ o 
+chute uma letra: u
+
+     +-----------+
+     |           |
+     O           |
+     |           |
+                 |
+                 |
+                 |
+================== 
+_ i _ _ i _ i _ _ o 
+chute uma letra: b
+
+     +-----------+
+     |           |
+     O           |
+    /|           |
+                 |
+                 |
+                 |
+================== 
+_ i _ _ i _ i _ _ o 
+chute uma letra: c
+
+     +-----------+
+     |           |
+     O           |
+    /|           |
+                 |
+                 |
+                 |
+================== 
+_ i _ _ i c i _ _ o 
+chute uma letra: h
+
+     +-----------+
+     |           |
+     O           |
+    /|\          |
+                 |
+                 |
+                 |
+================== 
+_ i _ _ i c i _ _ o 
+chute uma letra: m
+
+     +-----------+
+     |           |
+     O           |
+    /|\          |
+                 |
+                 |
+                 |
+================== 
+m i _ _ i c i _ m o 
+chute uma letra: r
+
+     +-----------+
+      |          |
+      O          |
+     /|\         |
+     /           |
+                 |
+                 |
+================== 
+m i _ _ i c i _ m o 
+chute uma letra: f
+
+     +-----------+
+     |           |
+     O           |
+    /|\          |
+    / \          |
+                 |
+                 |
+================== 
+m i _ _ i c i _ m o 
+chute uma letra: u
+repetiu letra
+chute uma letra: p
+morreu, a palavra era misticismo
+deseja jogar novamente? (SN)S
+
+     +-----------+
+                 |
+                 |
+                 |
+                 |
+                 |
+                 |
+================== 
+_ _ _ _ _ _ _ _ _ _ _ _ _ 
+chute uma letra: a
+
+     +-----------+
+                 |
+                 |
+                 |
+                 |
+                 |
+                 |
+================== 
+_ _ _ a _ _ _ _ _ a _ _ _ 
+chute uma letra: e
+
+     +-----------+
+                 |
+                 |
+                 |
+                 |
+                 |
+                 |
+================== 
+_ e _ a _ e _ _ _ a _ _ _ 
+chute uma letra: o
+
+     +-----------+
+                 |
+                 |
+                 |
+                 |
+                 |
+                 |
+================== 
+_ e _ a _ e _ _ _ a _ o _ 
+chute uma letra: r
+
+     +-----------+
+                 |
+                 |
+                 |
+                 |
+                 |
+                 |
+================== 
+r e _ a _ e _ _ _ a _ o _ 
+chute uma letra: m
+
+     +-----------+
+                 |
+                 |
+                 |
+                 |
+                 |
+                 |
+================== 
+r e m a _ e _ _ _ a m o _ 
+chute uma letra: i
+
+     +-----------+
+                 |
+                 |
+                 |
+                 |
+                 |
+                 |
+================== 
+r e m a _ e _ _ i a m o _ 
+chute uma letra: u
+
+     +-----------+
+     |           |
+                 |
+                 |
+                 |
+                 |
+                 |
+================== 
+r e m a _ e _ _ i a m o _ 
+chute uma letra: s
+
+     +-----------+
+     |           |
+                 |
+                 |
+                 |
+                 |
+                 |
+================== 
+r e m a _ e s _ i a m o s 
+chute uma letra: t
+
+     +-----------+
+     |           |
+     O           |
+                 |
+                 |
+                 |
+                 |
+================== 
+r e m a _ e s _ i a m o s 
+chute uma letra: l
+
+     +-----------+
+     |           |
+     O           |
+     |           |
+                 |
+                 |
+                 |
+================== 
+r e m a _ e s _ i a m o s 
+chute uma letra: f
+
+     +-----------+
+     |           |
+     O           |
+    /|           |
+                 |
+                 |
+                 |
+================== 
+r e m a _ e s _ i a m o s 
+chute uma letra: b
+
+     +-----------+
+     |           |
+     O           |
+    /|\          |
+                 |
+                 |
+                 |
+================== 
+r e m a _ e s _ i a m o s 
+chute uma letra: d
+
+     +-----------+
+      |          |
+      O          |
+     /|\         |
+     /           |
+                 |
+                 |
+================== 
+r e m a _ e s _ i a m o s 
+chute uma letra: n
+
+     +-----------+
+      |          |
+      O          |
+     /|\         |
+     /           |
+                 |
+                 |
+================== 
+r e m a n e s _ i a m o s 
+chute uma letra: p
+
+     +-----------+
+     |           |
+     O           |
+    /|\          |
+    / \          |
+                 |
+                 |
+================== 
+r e m a n e s _ i a m o s 
+chute uma letra: c
+acertou a palavra remanesciamos
+deseja jogar novamente? (SN)s
+
+     +-----------+
+                 |
+                 |
+                 |
+                 |
+                 |
+                 |
+================== 
+_ _ _ _ _ _ _ _ _ _ _ _ 
+chute uma letra: a
+
+     +-----------+
+                 |
+                 |
+                 |
+                 |
+                 |
+                 |
+================== 
+_ _ _ a _ _ _ _ _ a _ _ 
+chute uma letra: e
+
+     +-----------+
+                 |
+                 |
+                 |
+                 |
+                 |
+                 |
+================== 
+_ e _ a _ _ _ e _ a _ _ 
+chute uma letra: i
+
+     +-----------+
+                 |
+                 |
+                 |
+                 |
+                 |
+                 |
+================== 
+_ e _ a _ i _ e _ a _ _ 
+chute uma letra: o
+
+     +-----------+
+                 |
+                 |
+                 |
+                 |
+                 |
+                 |
+================== 
+_ e _ a _ i _ e _ a _ o 
+chute uma letra: u
+
+     +-----------+
+     |           |
+                 |
+                 |
+                 |
+                 |
+                 |
+================== 
+_ e _ a _ i _ e _ a _ o 
+chute uma letra: r
+
+     +-----------+
+     |           |
+     O           |
+                 |
+                 |
+                 |
+                 |
+================== 
+_ e _ a _ i _ e _ a _ o 
+chute uma letra: m
+
+     +-----------+
+     |           |
+     O           |
+     |           |
+                 |
+                 |
+                 |
+================== 
+_ e _ a _ i _ e _ a _ o 
+chute uma letra: n
+
+     +-----------+
+     |           |
+     O           |
+    /|           |
+                 |
+                 |
+                 |
+================== 
+_ e _ a _ i _ e _ a _ o 
+chute uma letra: b
+
+     +-----------+
+     |           |
+     O           |
+    /|\          |
+                 |
+                 |
+                 |
+================== 
+_ e _ a _ i _ e _ a _ o 
+chute uma letra: g
+
+     +-----------+
+      |          |
+      O          |
+     /|\         |
+     /           |
+                 |
+                 |
+================== 
+_ e _ a _ i _ e _ a _ o 
+chute uma letra: l
+
+     +-----------+
+      |          |
+      O          |
+     /|\         |
+     /           |
+                 |
+                 |
+================== 
+_ e _ a _ i _ e l a _ o 
+chute uma letra: t
+
+     +-----------+
+     |           |
+     O           |
+    /|\          |
+    / \          |
+                 |
+                 |
+================== 
+_ e _ a _ i _ e l a _ o 
+chute uma letra: d
+
+     +-----------+
+     |           |
+     O           |
+    /|\          |
+    / \          |
+                 |
+                 |
+================== 
+d e _ a _ i _ e l a d o 
+chute uma letra: c
+morreu, a palavra era desafivelado
+deseja jogar novamente? (SN)s
+
+     +-----------+
+                 |
+                 |
+                 |
+                 |
+                 |
+                 |
+================== 
+_ _ _ _ _ _ _ _ 
+chute uma letra: a
+
+     +-----------+
+                 |
+                 |
+                 |
+                 |
+                 |
+                 |
+================== 
+_ _ _ _ a _ _ _ 
+chute uma letra: e
+
+     +-----------+
+     |           |
+                 |
+                 |
+                 |
+                 |
+                 |
+================== 
+_ _ _ _ a _ _ _ 
+chute uma letra: o
+
+     +-----------+
+     |           |
+                 |
+                 |
+                 |
+                 |
+                 |
+================== 
+_ _ _ _ a _ _ o 
+chute uma letra: m
+
+     +-----------+
+     |           |
+     O           |
+                 |
+                 |
+                 |
+                 |
+================== 
+_ _ _ _ a _ _ o 
+chute uma letra: p
+
+     +-----------+
+     |           |
+     O           |
+     |           |
+                 |
+                 |
+                 |
+================== 
+_ _ _ _ a _ _ o 
+chute uma letra: t
+
+     +-----------+
+     |           |
+     O           |
+    /|           |
+                 |
+                 |
+                 |
+================== 
+_ _ _ _ a _ _ o 
+chute uma letra: c
+
+     +-----------+
+     |           |
+     O           |
+    /|\          |
+                 |
+                 |
+                 |
+================== 
+_ _ _ _ a _ _ o 
+chute uma letra: b
+
+     +-----------+
+      |          |
+      O          |
+     /|\         |
+     /           |
+                 |
+                 |
+================== 
+_ _ _ _ a _ _ o 
+chute uma letra: h
+
+     +-----------+
+     |           |
+     O           |
+    /|\          |
+    / \          |
+                 |
+                 |
+================== 
+_ _ _ _ a _ _ o 
+chute uma letra: l
+morreu, a palavra era vigiando
+deseja jogar novamente? (SN)s
+
+     +-----------+
+                 |
+                 |
+                 |
+                 |
+                 |
+                 |
+================== 
+_ _ _ _ _ _ _ _ _ _ 
+chute uma letra: a
+
+     +-----------+
+                 |
+                 |
+                 |
+                 |
+                 |
+                 |
+================== 
+_ _ _ _ _ a _ _ _ _ 
+chute uma letra: e
+
+     +-----------+
+                 |
+                 |
+                 |
+                 |
+                 |
+                 |
+================== 
+_ e _ _ _ a _ _ e _ 
+chute uma letra: i
+
+     +-----------+
+     |           |
+                 |
+                 |
+                 |
+                 |
+                 |
+================== 
+_ e _ _ _ a _ _ e _ 
+chute uma letra: o
+
+     +-----------+
+     |           |
+     O           |
+                 |
+                 |
+                 |
+                 |
+================== 
+_ e _ _ _ a _ _ e _ 
+chute uma letra: u
+
+     +-----------+
+     |           |
+     O           |
+                 |
+                 |
+                 |
+                 |
+================== 
+_ e _ u _ a _ _ e _ 
+chute uma letra: t
+
+     +-----------+
+     |           |
+     O           |
+                 |
+                 |
+                 |
+                 |
+================== 
+_ e t u _ a _ _ e _ 
+chute uma letra: r
+
+     +-----------+
+     |           |
+     O           |
+     |           |
+                 |
+                 |
+                 |
+================== 
+_ e t u _ a _ _ e _ 
+chute uma letra: s
+
+     +-----------+
+     |           |
+     O           |
+     |           |
+                 |
+                 |
+                 |
+================== 
+_ e t u _ a s s e _ 
+chute uma letra: p
+
+     +-----------+
+     |           |
+     O           |
+    /|           |
+                 |
+                 |
+                 |
+================== 
+_ e t u _ a s s e _ 
+chute uma letra: b
+
+     +-----------+
+     |           |
+     O           |
+    /|           |
+                 |
+                 |
+                 |
+================== 
+b e t u _ a s s e _ 
+chute uma letra: c
+
+     +-----------+
+     |           |
+     O           |
+    /|\          |
+                 |
+                 |
+                 |
+================== 
+b e t u _ a s s e _ 
+chute uma letra: l
+
+     +-----------+
+      |          |
+      O          |
+     /|\         |
+     /           |
+                 |
+                 |
+================== 
+b e t u _ a s s e _ 
+chute uma letra: n
+
+     +-----------+
+     |           |
+     O           |
+    /|\          |
+    / \          |
+                 |
+                 |
+================== 
+b e t u _ a s s e _ 
+chute uma letra: d
+morreu, a palavra era betumassem
+deseja jogar novamente? (SN)s
+
+     +-----------+
+                 |
+                 |
+                 |
+                 |
+                 |
+                 |
+================== 
+_ _ _ _ _ _ _ _ _ _ _ 
+chute uma letra: a
+
+     +-----------+
+     |           |
+                 |
+                 |
+                 |
+                 |
+                 |
+================== 
+_ _ _ _ _ _ _ _ _ _ _ 
+chute uma letra: e
+
+     +-----------+
+     |           |
+     O           |
+                 |
+                 |
+                 |
+                 |
+================== 
+_ _ _ _ _ _ _ _ _ _ _ 
+chute uma letra: i
+
+     +-----------+
+     |           |
+     O           |
+                 |
+                 |
+                 |
+                 |
+================== 
+_ _ _ _ _ _ i _ _ _ _ 
+chute uma letra: o
+
+     +-----------+
+     |           |
+     O           |
+                 |
+                 |
+                 |
+                 |
+================== 
+o _ _ _ _ _ i _ _ o _ 
+chute uma letra: u
+
+     +-----------+
+     |           |
+     O           |
+                 |
+                 |
+                 |
+                 |
+================== 
+o _ _ _ _ u i _ _ o _ 
+chute uma letra: g
+
+     +-----------+
+     |           |
+     O           |
+     |           |
+                 |
+                 |
+                 |
+================== 
+o _ _ _ _ u i _ _ o _ 
+chute uma letra: j
+
+     +-----------+
+     |           |
+     O           |
+    /|           |
+                 |
+                 |
+                 |
+================== 
+o _ _ _ _ u i _ _ o _ 
+chute uma letra: l
+
+     +-----------+
+     |           |
+     O           |
+    /|\          |
+                 |
+                 |
+                 |
+================== 
+o _ _ _ _ u i _ _ o _ 
+chute uma letra: m
+
+     +-----------+
+     |           |
+     O           |
+    /|\          |
+                 |
+                 |
+                 |
+================== 
+o _ _ _ _ u i _ m o _ 
+chute uma letra: n
+
+     +-----------+
+      |          |
+      O          |
+     /|\         |
+     /           |
+                 |
+                 |
+================== 
+o _ _ _ _ u i _ m o _ 
+chute uma letra: p
+
+     +-----------+
+     |           |
+     O           |
+    /|\          |
+    / \          |
+                 |
+                 |
+================== 
+o _ _ _ _ u i _ m o _ 
+chute uma letra: r
+
+     +-----------+
+     |           |
+     O           |
+    /|\          |
+    / \          |
+                 |
+                 |
+================== 
+o _ _ _ r u i r m o _ 
+chute uma letra: t
+
+     +-----------+
+     |           |
+     O           |
+    /|\          |
+    / \          |
+                 |
+                 |
+================== 
+o _ _ t r u i r m o _ 
+chute uma letra: b
+
+     +-----------+
+     |           |
+     O           |
+    /|\          |
+    / \          |
+                 |
+                 |
+================== 
+o b _ t r u i r m o _ 
+chute uma letra: s
+acertou a palavra obstruirmos
+deseja jogar novamente? (SN)n
+>>>         

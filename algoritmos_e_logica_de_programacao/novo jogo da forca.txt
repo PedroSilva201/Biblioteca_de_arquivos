@@ -1,0 +1,189 @@
+Python 3.7.3 (v3.7.3:ef4ec6ed12, Mar 25 2019, 21:26:53) [MSC v.1916 32 bit (Intel)] on win32
+Type "help", "copyright", "credits" or "license()" for more information.
+>>> forca = ['''
+          +--------+
+                   |
+                   |
+                   |
+                   |
+                   |
+                   |
+==================== ''', '''
+          +--------+
+          |        |
+                   |
+                   |
+                   |
+                   |
+                   |
+==================== ''', '''
+          +--------+
+          |        |
+          O        |
+                   |
+                   |
+                   |
+                   |
+==================== ''', '''
+          +--------+
+          |        |
+          O        |
+          |        |
+                   |
+                   |
+                   |
+==================== ''', '''
+          +--------+
+          |        |
+          O        |
+         /|        |
+                   |
+                   |
+                   |
+==================== ''', '''
+          +--------+
+          |        |
+          O        |
+         /|\       |
+                   |
+                   |
+                   |
+==================== ''', '''
+          +--------+
+          |        |
+          O        |
+         /|\       |
+         /         |
+                   |
+                   |
+==================== ''', '''
+          +--------+
+          |        |
+          O        |
+         /|\       |
+         / \       |
+                   |
+                   |
+==================== ''']
+>>> certas = erradas = ''
+>>> import requests
+>>> url = 'https://www.ime.usp.br/~pf/dicios/br-sem-acentos.txt'
+>>> palavras = requests.get(url).text.lower().split()
+>>> from random import choice
+>>> sorteada = choice(palavras)
+>>> len(palavras)
+261797
+>>> chute = 'e'
+>>> 
+>>> chute in sorteada
+True
+>>> certas = certas + 'e'
+>>> for c in sorteada:
+	if c in certas:
+		print (c, end = ' ')
+	else:
+		print ('_', end = ' ')
+
+		
+e _ _ _ e _ e _ _ _ 
+>>> chute = 'a'
+>>> chute in sorteada
+True
+>>> certas = certas + 'a'
+>>> for c in sorteada:
+	if c in certas:
+		print (c, end = ' ')
+	else:
+		print ('_', end = ' ')
+
+		
+e _ _ _ e _ e _ a _ 
+>>> chute = 'r'
+>>> chute in sorteada
+True
+>>> certas = certas + 'r'
+>>> for c in sorteada:
+	if c in certas:
+		print (c, end = ' ')
+	else:
+		print ('_', end = ' ')
+
+		
+e _ _ _ e _ e r a _ 
+>>> chute = 's'
+>>> chute in sorteada
+False
+>>> erradas = erradas + chute
+>>> print (forca[len(erradas)])
+
+          +--------+
+          |        |
+                   |
+                   |
+                   |
+                   |
+                   |
+==================== 
+>>> chute = 'm'
+>>> chute in sorteada
+True
+>>> certas = certas + 'm'
+>>> for c in sorteada:
+	if c in certas:
+		print (c, end = ' ')
+	else:
+		print ('_', end = ' ')
+
+		
+e m _ _ e _ e r a m 
+>>> chute = 'u'
+>>> chute in sorteada
+True
+>>> certas = certas + 'u'
+>>> for c in sorteada:
+	if c in certas:
+		print (c, end = ' ')
+	else:
+		print ('_', end = ' ')
+
+		
+e m u _ e _ e r a m 
+>>> chute = 'n'
+>>> chute in sorteada
+False
+>>> erradas = erradas + chute
+>>> print (forca[len(erradas)])
+
+          +--------+
+          |        |
+          O        |
+                   |
+                   |
+                   |
+                   |
+==================== 
+>>> chute = 'c'
+>>> chute in sorteada
+True
+>>> certas = certas + 'c'
+>>> for c in sorteada:
+	if c in certas:
+		print (c, end = ' ')
+	else:
+		print ('_', end = ' ')
+
+		
+e m u _ e c e r a m 
+>>> chute = 'd'
+>>> chute in sorteada
+True
+>>> certas = certas + 'd'
+>>> for c in sorteada:
+	if c in certas:
+		print (c, end = ' ')
+	else:
+		print ('_', end = ' ')
+
+		
+e m u d e c e r a m 
+>>> 
