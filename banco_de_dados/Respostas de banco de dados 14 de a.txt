@@ -1,0 +1,14 @@
+Respostas de banco de dados 14 de abril de 2023
+1)
+2)
+a entidade funcionario obrigatoriamente deve possuir um dependente relacionado a ela: falso
+nao existe nenhum relacionamento n:n neste der: falso
+o atributi endereço da entidade funcionario e do tipo multivalorado:falso
+um funcionario pode participar de varios projetos na empresa:verdadeiro
+o funcionario nao e supervisor:falso
+podem existir funcionario sem projeto, bem como projeto sem funcionario: falso
+nem todo departamento possui um projeto: verdadeiro
+o atributo nome do funcioanrio e um atributo monovalorado:verdadeiro
+este diagrama e formado por 4 entidades e 6 relacionamentos: verdadeiro
+28) nao pois havera violaçao na integridade
+28)podera ser excluido devido ao uso da chave estrangeira
