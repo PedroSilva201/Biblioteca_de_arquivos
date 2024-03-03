@@ -1,0 +1,72 @@
+/*select c.cli_nome, p.ped_data from cliente c inner join pedido p on c.cli_codigo = p.cli_codigo;*/
+/*select * from vendedor;
+select c.cli_nome, p.ped_data from cliente c, vendedor v, pedido p where c.cli_codigo= p.cli_codigo and v.ven_codigo = p.ven_codigo;*/
+/*select c.cli_nome, v.ven_nome, p.ped_data from cliente c inner join pedido p on c.cli_codigo = p.cli_codigo inner join vendedor v on v.ven_codigo= p.ven_codigo;*/
+use venda;
+/*select * from produto;select * from vendedor;select * from produto;select * from item_pedido;*/
+/*select p.prod_descricao, v.ven_nome from produto p inner join venda v on p.cli_codigo = v.cli_codigo;*/ 
+/*select p.prod_descricao, i.item_pedido from produto p inner join item i on p.cli_codigo = i.cli_codigo;*/
+/*select pr.prod_descricao from pedido pe, item_pedido it, produto pr, vendedor ve where pe.ven_codigo = ve.ven_codigo and pe.ped_numero=it.ped_numero
+and  it.pro_codigo=pr.pro_codigo and ve.ven_nome='Josias';*/ 
+/*select pr.prod_descricao 
+from pedido pe inner join vendedor ve
+on pe.ven_codigo = ve.ven_codigo
+inner join item_pedido it
+on pe.ped_numero=it.ped_numero
+inner join produto pr
+on it.pro_codigo=pr.pro_codigo
+and ve.ven_nome='Josias'; 
+/*, , vendedor ve where  and 
+and   and*/ 
+/*select * from pedido cross  join cliente;*/
+/*select c.cli_nome, p.ped_data from cliente c cross join pedido p;*/
+/*YASMIN PRESENTE*/
+/*select c.cli_codigo, c.cli_nome, t.tel_numero
+from cliente c, telefone t
+where c.cli_codigo=t.cli_codigo;*/
+/*select c.cli_codigo, c.cli_nome, t.tel_numero
+from cliente c left outer join telefone t
+on c.cli_codigo=t.cli_codigo;*/
+/*select c.cli_codigo, c.cli_nome, t.tel_numero
+from telefone t right outer join cliente c
+on c.cli_codigo=t.cli_codigo;*/
+/*select c.cli_codigo, c.cli_nome, t.tel_numero
+from cliente c inner join telefone t
+on c.cli_codigo=t.cli_codigo;*/
+/*select c.cli_codigo, c.cli_nome, t.tel_numero
+from cliente c left outer join telefone t
+on c.cli_codigo=t.cli_codigo;*/
+/*select c.cli_codigo, c.cli_nome, t.tel_numero
+from telefone t right outer join cliente c 
+on t.cli_codigo=c.cli_codigo;*/
+/*select c.cli_codigo, c.cli_nome, t.tel_numero
+from cliente c left outer join telefone t
+on c.cli_codigo=t.cli_codigo
+where t.cli_codigo is null;*/
+/*select c.cli_codigo, c.cli_nome, t.tel_numero
+from telefone t right outer join cliente c 
+on t.cli_codigo=c.cli_codigo
+where t.cli_codigo is null;*/
+/*MATEUS, ANA dionisio*/
+/*select f.fun_cod, f.fun_nome, d.dep_descricao
+from departamento d right outer join funcionario f  on f.dep_id = d.dep_id;*/
+/*select f.fun_cod, f.fun_nome, d.dep_descricao
+from funcionario f left outer join departamento d on f.dep_id = d.dep_id;*/
+/*select * from funcionario
+where dep_id is null;*/
+/*select * from telefone2;*/
+/*select f.fun_cod, f.fun_nome, d.dep_descricao, t.tel_codigo
+from departamento d right outer join funcionario f on f.dep_id = d.dep_id left outer join telefone2 t on t.func_cod=f.fun_cod order by f.fun_cod;
+*/
+/*create table faixa_salarial (fa_cod varchar(1) primary key,
+                                           fa_menor decimal(6,2),
+                                           fa_maior decimal (6,2));
+
+
+insert into faixa_salarial values ('A',1000.00,2999.00);
+insert into faixa_salarial values ('B',3000.00,5999.00);
+insert into faixa_salarial values ('c',6000.00,9999.00);*/
+select f.fun_cod, 
+f.fun_nome, 
+f.fun_sal, 
+fa.fa_cod from funcionario f, faixa_salarial fa 

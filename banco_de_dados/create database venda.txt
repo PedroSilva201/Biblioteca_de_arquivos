@@ -1,0 +1,32 @@
+create database venda;
+use venda;
+select * from funcionario;/*AUTO RELACIONAMENTO*/
+use venda;
+alter table funcionario add gerente_cod int;
+alter table funcionario add constraint foreign key (gerente_cod) references funcionario (fun_cod);
+update funcionario set gerente_cod=5 where fun_cod in (1, 2, 3, 4);
+select f.fun_nome Funcionario, g.fun_nome Gerente from funcionario f, funcionario g where f.gerente_cod=g.fun_cod;
+/*funçoes de grupo*/
+delete from funcionario where fun_cod=6;
+select * from funcionario;
+select avg(fun_sal) from funcionario where dep_id = 1;
+select sum(fun_sal) from funcionario where dep_id = 2;
+select avg(fun_sal), sum(fun_sal) from funcionario;
+select min(fun_sal), max(fun_sal) from funcionario;
+select count(*) from funcionario where dep_id=2;
+select count(distinct dep_id) from funcionario;
+select count(dep_id) from funcionario;
+select count(*) from funcionario;
+select dep_id, avg(fun_sal) from funcionario group by dep_id;
+select dep_id, round(avg(fun_sal),5) from funcionario group by dep_id;
+select dep_id, round(avg(fun_sal),4) from funcionario group by dep_id;
+select dep_id, round(avg(fun_sal),3) from funcionario group by dep_id;
+select dep_id, round(avg(fun_sal),2) from funcionario group by dep_id;
+select dep_id, round(avg(fun_sal),1) from funcionario group by dep_id;
+select dep_id, round(avg(fun_sal),0) from funcionario group by dep_id;
+select dep_id, round(avg(fun_sal),2) from funcionario group by dep_id;
+select f.dep_id, d.dep_descricao, round(avg(f.fun_sal),2) from funcionario f, departamento d where f.dep_id=d.dep_id group by dep_id;
+select f.dep_id, d.dep_descricao, round(avg(f.fun_sal),2) from funcionario f, departamento d where f.dep_id=d.dep_id group by dep_id having avg(fun_sal) >3500;
+select max(fun_sal) from funcionario;
+select * from funcionario;
+select fun_nome from funcionario where fun_sal=(select max(fun_sal) from funcionario);
