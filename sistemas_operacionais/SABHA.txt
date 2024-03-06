@@ -1,0 +1,9 @@
+Atividades de SO2 até aqui:
+
+-Hello World no servidor Apache
+-Conexão SSH modificando a porta 22
+-Banco de dados Mysql ou MariaDB
+-CRUD com interface sendo utilizada no terminal
+
+
+EU DISSE QUE O SABHA CHEGARA EM BREVE E CHEGOU e estou muito feliz!!!!!

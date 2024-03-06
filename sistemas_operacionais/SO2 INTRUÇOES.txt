@@ -1,0 +1,56 @@
+quarta-feira, 22 de março de 2023
+onde estamos!
+virtual box
+vm
+linux instalado
+rede configurada
+repositorio configurado
+htop instalado
+posiçao zero!!!
+
+proximos passos
+->instalaçao ssh server 
+->acesso via windows
+(1° entrega autonôma)
+-> instalaçao apache server
+->desenvolvimento da pagina "hello world"
+->acesso via windows
+
+apt-get update
+apt-get install <nome_do_pacote> instalar
+apt-get remove <nome_do_pacote> remover
+wiki.debian.org
+apt-cache search <argumento_de_busca>
+
+ssh server 22/tcp
+->net -tools instalado
+porsiçao zero!!!
+mysql 3306/tcp
+localhost -> 127.0.0.1
+qualquer origem -> 0.0.0.0
+/etc/init.d/ssh stop (desligar)
+/etc/init.d/ssh start (ligar) ou
+/etc/init.d/ssh restart (reinicializar)
+D (servidor)
+a tudo
+n resolver tudo
+t protocolo tcp
+-------------------------------------------------
+nano -> editor de texto
+configurar rede:nano /etc/network/interface
+configurar repositorio: /etc/apt/soucers.list
+restart na placa de rede /etc/init-d/networking restart
+start/stop/restart em serviços
+/etc/init.d/start
+/etc/init.d/stop
+/etc.init.d/restart
+atualizar lista do repositorio
+apt.get update
+instalar pacote
+apt-get install <nome_do_pacote>
+apt-get remove <nome_do_pacote>
+ver ip
+ip a 132.16.13.xxx (exemplo)
+ver porta de serviço executando
+netstat-ant
+fonte de pesquisa: wiki.debian.org/pt_BR

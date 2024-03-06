@@ -1,0 +1,45 @@
+3° Entrega
+
+-> Instalar My Sql Server/Mariadb
+-> Criar 1 banco com duas tabelas
+-> Manipular dados das tabelas
+
+---------------------------------------------------
+
+
+***INSTALAÇÃO***
+
+apt-get update
+
+apt-cache search mysql-server
+
+apt-get install default-mysql-server
+
+mysql_secure_installation
+
+
+***CONECTANDO NO BANCO***
+
+mysql -h localhost -u root -p       (conecta no mariadb)
+
+show databases;
+
+create database entrega3;             (criando database)
+
+use entrega3; (selecionando e usando a base de dados criada)
+
+create table usuario (Nome char(20), Email char(30), Telefone int); (criando tabela)
+
+describe usuario; (visualizando tabela)
+
+create table produto (Nome char(20), Identificacao varchar(30), Preco int// caso queria nmr com virgula -> double(15(nmr de casas),2(nmr de casas dps do decimal)));
+
+insert into usuario values ('Gabriel', 'gabrielcoutinho2011@gmail.com', 92929292); (populando tabela)
+
+select * usuario; (visualizando registros da tabela)
+select Nome(nome da coluna que você quer) usuario;
+
+select Nome from produtos where Preco > 7;
+
+caso queria alterar é:
+update (nome tabela) set Nome(nome da coluna)

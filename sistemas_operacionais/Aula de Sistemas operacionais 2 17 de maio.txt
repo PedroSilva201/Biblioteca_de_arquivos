@@ -1,0 +1,15 @@
+Quarta-feira 17 de maio de 2023
+Disciplina de Sistemas Operacionais 2 (Dois)
+Nenhuma novidade para hoje
+as atividades realizadas até aqui são:
+-Hello world!
+-Mudança no SSH (porta 22)
+-MYSQL/MARIADB instalado e rodando na Maquina
+-CRUD de MYSQL/MARIADB 
+-PHPMYADMIN
+-CRUD com Django
+
+Lembrando que no dia 07 de junho será realidado o Docker (Todos farão juntos esta atividade)
+Data Limite de ebtregas é no dia 21/06
+
+SABHA Chegará logo após o intervalo (09:15)
