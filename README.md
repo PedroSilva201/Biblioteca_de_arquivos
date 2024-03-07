@@ -12,6 +12,6 @@ Atualizações de 27 de fevereiro: Foram inseridos conteúdos referentes às dis
 
 Qulquer duvida de imediato poderá ser respondido por este formulário  <a href="https://docs.google.com/forms/d/e/1FAIpQLSe0_BBdMY4P-u1ZmF2lRc_1MupEfRDpzLO0CHs9ZsUy_5gM2w/viewform?usp=sf_link">Apenas informando seu nome e sua dúvida ou algo relacionado.</a>
 
-Conteúdos de praticamente todas as disciplinas que eu fiz estão aqui, exceto itens de rascunho, anotações básicas, atividades não finalizadas ou não validadas e em alguns casos conteúdo que não poderá ser vazado em público.
+Conteúdos de praticamente todas as disciplinas que eu fiz estão aqui, exceto itens de rascunho, anotações básicas, atividades não finalizadas ou não validadas e em alguns casos conteúdo que não poderá ser exibido por motivo de força maior, sobretudo dos autores originais de determinados arquivos.
 
 Em alguns casos será inserido conteúdo referente aos videos, que neste caso estarão disponiveis no meu drive para assistir (em breve).
