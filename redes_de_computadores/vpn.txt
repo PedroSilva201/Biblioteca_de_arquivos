@@ -1,0 +1,10 @@
+sudo su
+apt update
+apt upgrade
+wget https://git.io/vpn -O openvpn-install.sh
+chmod +x openvpn-install.sh
+sudo ./openvpn-install.sh
+systemctl stop openvpn-server@server.service
+sudo systemctl start openvpn-server@server.service
+sudo systemctl status openvpn-server@server.service
+
