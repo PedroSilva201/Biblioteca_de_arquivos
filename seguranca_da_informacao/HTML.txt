@@ -1,0 +1,81 @@
+HTML
+<fieldset>
+    <legend>Selecione a versão:</legend>
+
+    <div>
+      <input type="radio" id="huey" name="drone" value="huey"
+             checked>
+      <label for="huey">1.0</label>
+    </div>
+
+    <div>
+      <input type="radio" id="dewey" name="drone" value="dewey">
+      <label for="dewey">1.1</label>
+    </div>
+
+    <div>
+      <input type="radio" id="louie" name="drone" value="louie">
+      <label for="louie">1.2</label>
+    </div>
+</fieldset>array
+--------------------------------------------------------------------
+CSS
+p,
+label {
+    font: 1rem 'Fira Sans', sans-serif;
+}
+
+input {
+    margin: 0.4rem;
+}
+------------------------------------------------------------------
+BANCO DE DADOS
+show databases;
+use venda;
+show tables;
+select * from produto;
+select * from pedido;
+select * from item_pedido;
+select * from pedido;
+select f.dep_id, d.dep_descricao, round(avg(f.fun_sal),2) from funcionario f, departamento d where f.dep_id=d.dep_id group by dep_id having avg(fun_sal) >3500;
+show tables;
+
+create database pedido;
+use pedido;
+create table Cliente 
+(cli_cod int primary key,
+ cli_nome varchar(30),
+ cli_ativo int DEFAULT 1,
+ cli_data_nasc date);
+ select * from information_schema.table_constraints where constraint_schema='pedido';
+ insert into cliente values (1,'João', 0, '1978-10-30');
+ insert into cliente(cli_cod, cli_nome, cli_data_nasc) values (2,'Maria','1978-10-30');
+ select * from cliente;
+ drop table cliente;
+ create table Cliente 
+(cli_cod int primary key,
+ cli_nome varchar(30),
+ cli_ativo int DEFAULT 1,
+ cli_data_nasc date,
+ cli_cpf int,
+ constraint uk_cpf unique(cli_cpf));
+ create table Pedido
+ 
+ select * from information_schema.table_constraints where constraint_schema='pedido';
+ create table Pedido
+(ped_id int primary key auto_increment,
+ped_data date, 
+ped_valor_total decimal (8,2));
+
+create table produto
+(pro_id int primary key auto_increment,
+pro_descricao varchar(30));
+
+create table itempedido
+(ped_cod int,
+pro_cod int,
+ite_quantidade int,
+ite_valor decimal(7,2),
+foreign key(ped_cod) references pedido (ped_id),
+foreign key(pro_cod) references porduto(pro_id),
+primary key(ped_cod, pro_cod));

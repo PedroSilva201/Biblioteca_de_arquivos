@@ -1,0 +1,37 @@
+ pip install flask==2.0.2
+# pegaria a 2.0.2 que é última versão compatível com a 2.0.0
+pip3 install flask~=2.0.0 
+pip3.exe install mysqlclient
+pip install mysql-connector-python==8.0.28
+ pip install flask-sqlalchemy==2.5.1
+ pip install flask-wtf==1.0.0 
+ pip install flask-bcrypt==0.7.1
+
+Versões utilizadas:
+Python: 3.9.9
+- Flask: 2.0.2
+PyCharm: 2021.3.2
+Bootstrap: 5.1.x
+MySQL: 8.0.28
+- mysql-connector-python: 8.0.28
+- Flask-SQLAlchemy: 2.5.1
+- Flask-WTF: 1.0.0
+- Flask-Bcrypt: 0.7.1
+
+///////////////////////////////////////////////////////////////////////////////
+Refazer o Observer
+MVC COMPLEXO USANDO OS ELEMENTOS VISTOS EM SALA DE AULA.
+
+strategy 1
+strategy 2
+observer
+composite
+singleton 
+facade
+
+adicionar 10:11 29/05/2023interface javaswing ()
+
+//////////////////////////////////////////
+\\\\\\\\\\///////////
+
+11:28 30/05/2023

@@ -1,0 +1,19 @@
+EXEMPLO
+<!DOCTYPE html>
+<input type="radio" name="webmaster_nome_do_grupo" value="sim"/> Sim<br />
+<input type="radio" name="webmaster_nome_do_grupo" value="nao"/> Não<br />
+<input type="radio" name="webmaster_nome_do_grupo" value="talvez"/> Talvez<br />
+<input type="radio" name="webmaster_nome_do_grupo" value="quem_sabe"/> Quem sabe<br />
+<input type="radio" name="webmaster_nome_do_grupo" value="valor"/> Valor<br />
+<button>Enviar</button>
+
+PROPOSTO
+<!DOCTYPE html>
+<input type="radio" name="versao" value="VA"/> Versão 1.0<br />
+<input type="radio" name="versao" value="VB"/> Versão 2.0<br />
+<input type="radio" name="versao" value="VC"/> Versão 3.0<br />
+<input type="radio" name="versao" value="VD"/> Versão 4.0<br />
+<input type="radio" name="versao" value="VE"/> Versão 5.0<br />
+<button>Enviar</button>
+
+inserir tambem campos extras no banco de dados
