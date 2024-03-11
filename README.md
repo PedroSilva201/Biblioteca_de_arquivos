@@ -8,7 +8,7 @@ Alguns materiais por precaução não serão colocados devido a mudanças consta
 
 O meu foco é ajudar principalmente em que tem problemas de resolver tarefas com matemática, seja com Programação Linear ou Estatística Aplicada como exemplo, mas ajudarei todos para conseguir avançar ou terminar o curso.
 
-Atualizações de 27 de fevereiro: Foram inseridos conteúdos referentes às disciplinas de Matemática Discreta e Estrutura de Dados, mas novos conteúdos serão adicionados nos próximos dias
+
 
 Qulquer duvida de imediato poderá ser respondido por este formulário  <a href="https://docs.google.com/forms/d/e/1FAIpQLSe0_BBdMY4P-u1ZmF2lRc_1MupEfRDpzLO0CHs9ZsUy_5gM2w/viewform?usp=sf_link">Apenas informando seu nome e sua dúvida ou algo relacionado.</a>
 
