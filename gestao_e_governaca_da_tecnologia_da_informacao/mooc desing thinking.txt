@@ -1,0 +1,29 @@
+a) Liste 3 finalidades do Diagrama de Afinidades.
+Seguem as finalidades do Diagrama de Afinidades. Esperava-se que você citasse três delas.
+
+
+Fornecer suporte para solução de um problema;
+Fornecer suporte para a inovação de conceitos tradicionais;
+Prever situações futuras;
+Organizar as ideias resultantes de algum processo de avaliação, como na auditoria da qualidade;
+Planejar a coleta de dados para futura Estratificação.
+b) Liste 3 itens que compõe o roteiro de construção de um Digrama de Afinidades.
+Seguem os itens do roteiro para elaborar Diagrama de Afinidades. Esperava-se que você citasse três deles.
+
+
+Identifique cada grupo pela característica comum de agrupamento e registre-a no cartão título, que deverá ter alguma marca, para diferenciá-lo dos cartões de dados.
+Prenda cada grupo ao seu cartão título, de modo que apenas que apenas este último esteja visível.
+Repita os passos 3, 4, 5 usando os cartões título como cartões dados.
+Repita os passos, 3, 4, 5 para cada novo conjunto de cartões título criados, até que você tenha, apenas, um grupo contendo no máximo 5 cartões títulos.
+Comece a construção do diagrama pelos pequenos grupos iniciais; construa um retângulo envolvendo cada grupo.
+Sobre o lado superior do retângulo coloque o cartão título do grupo
+Envolva, com um retângulo, os retângulos cujo título forma um grupo.
+
+outros topicos
+uma vez com o felipe
+outra vez com o felipe
+um carro bateu
+quebrou de novo
+mangueira quebrada
+quebrou 1, 2, 3... vezes
+mais vezes
