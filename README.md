@@ -21,4 +21,6 @@ Em alguns casos será inserido conteúdo referente aos videos, que neste caso es
 <a href="https://drive.google.com/file/d/1YiEKqyBt3VKIx2jHaEERybGcZtMF4_oT/view?usp=sharing&t=4">Como gravar uma maquina virtual utilizando o Debian</a>
 <br/>
 <a href="https://github.com/PedroSilva201"></a>
-A lista pode aumentar conforme a demanda dos interresados.
+
+A lista pode aumentar conforme a demanda dos interresados de acordo com os temas de seu interrese.
+Todos os arquivos já foram colados, um ou outro item poderá ser removido devido a repetição de arquivos ou rascunho pessoal.
