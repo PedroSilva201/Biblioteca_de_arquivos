@@ -1,0 +1,155 @@
+TABELA.SQL
+use anotacao;
+
+create table clt_cliente (
+    clt_id bigint primary key auto_increment,
+    clt_nome varchar(100) not null,
+    clt_email varchar(100) not null unique,
+    clt_telefone int not null
+);
+
+insert into clt_cliente (clt_nome, clt_email, clt_telefone)
+    values ('Carmen', 'carmen@sandiego.com', 997114343),
+           ('Banjo', 'banjo@kazooie.com', 997224444);
+
+CLIENTECONTROLLER.JAVA
+package br.gov.sp.fatec.projetotopicos.controller;
+
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
+import br.gov.sp.fatec.projetotopicos.entity.Cliente;
+import br.gov.sp.fatec.projetotopicos.service.ClienteService;
+import org.springframework.beans.factory.annotation.Autowired;
+
+@RestController
+@RequestMapping(value= "/cliente")
+@CrossOrigin
+public class ClienteController {
+    @Autowired
+    private ClienteService CliSevMed;
+
+    @GetMapping(value ="/{email}")
+    public List<Cliente> findByEmailContains(@PathVariable("email") String email){
+        return CliSevMed.buscarPorEmail(email);
+    }
+    
+}
+
+CLIENTE.JAVA (ENTITY)
+package br.gov.sp.fatec.projetotopicos.entity;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+//import java.text.SimpleDateFormat;  
+//import java.util.Date; 
+
+@Entity
+@Table(name = "clt_cliente")
+public class Cliente {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "clt_id")
+    private Long id;
+
+    @Column(name ="clt_nome")
+    private String nome;
+
+    @Column(name ="clt_email")
+    private String email;
+
+    @Column(name ="clt_telefone")
+    private Integer telefone;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getNome() {
+        return this.nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getEmail() {
+        return this.email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public Integer getTelefone() {
+        return this.telefone;
+    }
+
+    public void setTelefone(Integer telefone) {
+        this.telefone = telefone;
+    }
+
+}
+
+CLIENTEREPOSITORY
+
+package br.gov.sp.fatec.projetotopicos.repository;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+//import org.springframework.data.jpa.repository.Query;
+
+import br.gov.sp.fatec.projetotopicos.entity.Cliente;
+
+public interface ClienteRepository extends JpaRepository<Cliente , Long>{
+    public List <Cliente> findByEmailContains(String email);
+}
+
+
+CLIENTESERVICE.JAVA
+package br.gov.sp.fatec.projetotopicos.service;
+
+import java.util.List;
+import br.gov.sp.fatec.projetotopicos.entity.Cliente;
+
+public interface ClienteService {
+    public List<Cliente> buscarPorEmail(String email);
+    
+}
+
+CLIENTESERVICEIMPL.JAVA
+package br.gov.sp.fatec.projetotopicos.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import br.gov.sp.fatec.projetotopicos.entity.Cliente;
+import br.gov.sp.fatec.projetotopicos.repository.ClienteRepository;
+
+@Service
+public class ClienteServiceImpl implements ClienteService {
+    @Autowired
+    private ClienteRepository cliRepo;
+
+    @Override
+    public List<Cliente> buscarPorEmail(String email){
+        List<Cliente> clienteOptional = cliRepo.findByEmailContains(email);
+            return clienteOptional;
+    }
+}

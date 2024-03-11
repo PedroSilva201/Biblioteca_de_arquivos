@@ -1,0 +1,65 @@
+//com
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+
+<div id="app">
+
+  <input type="text" v-bind:value="message">
+  <p> {{ message }} </p>
+</div>
+
+//sem
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+
+<div id="app">
+
+  <input type="text" value="message">
+  <p> {{ message }} </p>
+</div>
+//:
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+
+<div id="app">
+
+  <input type="text" :value="message">
+  <p> {{ message }} </p>
+</div>
+///partialmente funcionando
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+
+<div id="app">
+<button @click="contador++">Incrementar</button>
+  <p>Contador: {{ contador }}</p>
+  <p>Dobro: <input type=number v-model="contadorDobro"></p>
+</div>
+
+new Vue({
+	el: '#app',
+	data: {
+		contador: 0
+	},
+  computed: {
+  	contadorDobro: {
+  		get (){
+  			return this.contador * 2;
+  			},
+  		set(valor){
+  	this.contador = Math.floor(valor /2);
+  	}
+  }
+  }
+})
+observaçao: parou no minunto 09 do video de revisao
+pode nao rodar de forma local
+show databases
+show table
+
+OBSERVAÇAO: ERRATA 
+HOJE E REVISAO DE FRONT-END (VUE), INTEGRAÇAO ENTRE BACK-END E FRONT-END
+PROXIMA SEGUNDA-FEIRA (28/11) RECUPERAÇAO DE BACK-END
+ANALISE DE PROVA:
+CRIAR UMA NOVA ROTA A PARTIR DO CONTROLLER
+permitido consulta, menos via de chat, nem falar o colega
+quem fez sozinho, pode fazer em dupla
+eu como fiz sozinho posso fazer em dupla desde que nao haja computadores disponiveis
+projeto topicos (back-end)
+vue-topicos (front-end)

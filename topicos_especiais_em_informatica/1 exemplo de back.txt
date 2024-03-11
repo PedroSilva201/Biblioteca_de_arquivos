@@ -1,0 +1,512 @@
+EXEMPLO USANDO TESTE.CONTROLLER
+package br.gov.sp.fatec.projetotopicos.controller;
+
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@RestController
+@RequestMapping(value = "/teste")
+public class TesteController {
+    @GetMapping
+    public String hello() {
+        return "HNS!";
+    }
+}
+
+EXERCICIO DA SEGUNDA ROTA
+EXERCICIO.CONTROLLER
+package br.gov.sp.fatec.projetotopicos.controller;
+
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@RestController
+@RequestMapping(value = "/exercicio")
+public class ExercicioController {
+    @GetMapping
+    public String hello() {
+        return "Linha 6 do metro agora e abacaxi e nao mais laranja!";
+    }
+}
+
+
+EXEMPLO DA TERCEIRA ROTA
+
+package br.gov.sp.fatec.projetotopicos.controller;
+
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@RestController
+@RequestMapping(value = "/cidade")
+public class CidadeController {
+    @GetMapping
+    public String hello() {
+        return "Prefeitura da cidade de Nlognia, governo municipal!";
+    }
+}
+
+TRABALHO
+
+package br.gov.sp.fatec.projetotopicos.controller;
+
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@RestController
+@RequestMapping(value = "/trabalho")
+public class TrabalhoController {
+    @GetMapping
+    public String hello() {
+        return "Bom dia Anna!";
+    }
+}
+
+
+SEGUNDA FASE
+ENTITY
+CIDADE
+package br.gov.sp.fatec.projetotopicos.entity;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "ant_anotacao")
+public class Cidade {
+    
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "ant_id")
+    private Long id;
+
+    @Column(name = "ant_texto")
+    private String texto;
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "usr_id")
+    private Usuario usuario;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getTexto() {
+        return texto;
+    }
+
+    public void setTexto(String texto) {
+        this.texto = texto;
+    }
+
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
+    }
+    
+}
+
+
+EXERCICIO
+package br.gov.sp.fatec.projetotopicos.entity;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "ant_anotacao")
+public class Exercicio {
+    
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "ant_id")
+    private Long id;
+
+    @Column(name = "ant_texto")
+    private String texto;
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "usr_id")
+    private Usuario usuario;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getTexto() {
+        return texto;
+    }
+
+    public void setTexto(String texto) {
+        this.texto = texto;
+    }
+
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
+    }
+    
+}
+
+
+TESTE
+
+package br.gov.sp.fatec.projetotopicos.entity;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "ant_anotacao")
+public class Teste {
+    
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "ant_id")
+    private Long id;
+
+    @Column(name = "ant_texto")
+    private String texto;
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "usr_id")
+    private Usuario usuario;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getTexto() {
+        return texto;
+    }
+
+    public void setTexto(String texto) {
+        this.texto = texto;
+    }
+
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
+    }
+    
+}
+
+
+REPOSITORY
+CIDADE
+package br.gov.sp.fatec.projetotopicos.repository;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import br.gov.sp.fatec.projetotopicos.entity.Anotacao;
+
+public interface CidadeRepository extends JpaRepository<Anotacao, Long>{
+
+    public List<Anotacao> findByTextoContainsIgnoreCase(String texto);
+    
+}
+
+EXERCICIO
+package br.gov.sp.fatec.projetotopicos.repository;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import br.gov.sp.fatec.projetotopicos.entity.Anotacao;
+
+public interface ExercicioRepository extends JpaRepository<Anotacao, Long>{
+
+    public List<Anotacao> findByTextoContainsIgnoreCase(String texto);
+    
+}
+
+
+TESTE
+package br.gov.sp.fatec.projetotopicos.repository;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import br.gov.sp.fatec.projetotopicos.entity.Anotacao;
+
+public interface TesteRepository extends JpaRepository<Anotacao, Long>{
+
+    public List<Anotacao> findByTextoContainsIgnoreCase(String texto);
+    
+}
+
+
+SERVICE
+CIDADE
+package br.gov.sp.fatec.projetotopicos.service;
+
+import java.util.List;
+
+import br.gov.sp.fatec.projetotopicos.entity.Anotacao;
+
+public interface CidadeService {
+
+    public List<Anotacao> todas();
+
+    public List<Anotacao> buscarNoTexto(String texto);
+
+    public Anotacao salvar(Anotacao anotacao, String nomeUsuario);
+    
+}
+
+CIDADE IMPL
+package br.gov.sp.fatec.projetotopicos.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.stereotype.Service;
+
+import br.gov.sp.fatec.projetotopicos.entity.Anotacao;
+import br.gov.sp.fatec.projetotopicos.entity.Usuario;
+import br.gov.sp.fatec.projetotopicos.repository.AnotacaoRepository;
+import br.gov.sp.fatec.projetotopicos.repository.UsuarioRepository;
+
+@Service
+public class CidadeServiceImpl implements AnotacaoService {
+
+    @Autowired
+    private AnotacaoRepository repo;
+
+    @Autowired
+    private UsuarioRepository usuarioRepo;
+
+    @Override
+    public List<Anotacao> todas() {
+        return repo.findAll();
+    }
+
+    @Override
+    public List<Anotacao> buscarNoTexto(String texto) {
+        return repo.findByTextoContainsIgnoreCase(texto);
+    }
+
+    @PreAuthorize("isAuthenticated()")
+    @Override
+    public Anotacao salvar(Anotacao anotacao, String nomeUsuario) {
+        if(nomeUsuario == null ||
+                nomeUsuario.isBlank()) {
+            throw new AnotacaoException("Não é possível criar anotação! Usuário não informado!");
+        }
+        Usuario usuario = usuarioRepo.findByNome(nomeUsuario);
+        if(usuario == null) {
+            throw new AnotacaoException("Não é possível criar anotação! Usuário não encontrado!");
+        }
+        anotacao.setUsuario(usuario);
+        return repo.save(anotacao);
+    }
+    
+}
+
+EXERCICIO
+package br.gov.sp.fatec.projetotopicos.service;
+
+import java.util.List;
+
+import br.gov.sp.fatec.projetotopicos.entity.Anotacao;
+
+public interface ExercicioService {
+
+    public List<Anotacao> todas();
+
+    public List<Anotacao> buscarNoTexto(String texto);
+
+    public Anotacao salvar(Anotacao anotacao, String nomeUsuario);
+    
+}
+
+EXERCIO IMPL
+package br.gov.sp.fatec.projetotopicos.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.stereotype.Service;
+
+import br.gov.sp.fatec.projetotopicos.entity.Anotacao;
+import br.gov.sp.fatec.projetotopicos.entity.Usuario;
+import br.gov.sp.fatec.projetotopicos.repository.AnotacaoRepository;
+import br.gov.sp.fatec.projetotopicos.repository.UsuarioRepository;
+
+@Service
+public class ExercicioServiceImpl implements AnotacaoService {
+
+    @Autowired
+    private AnotacaoRepository repo;
+
+    @Autowired
+    private UsuarioRepository usuarioRepo;
+
+    @Override
+    public List<Anotacao> todas() {
+        return repo.findAll();
+    }
+
+    @Override
+    public List<Anotacao> buscarNoTexto(String texto) {
+        return repo.findByTextoContainsIgnoreCase(texto);
+    }
+
+    @PreAuthorize("isAuthenticated()")
+    @Override
+    public Anotacao salvar(Anotacao anotacao, String nomeUsuario) {
+        if(nomeUsuario == null ||
+                nomeUsuario.isBlank()) {
+            throw new AnotacaoException("Não é possível criar anotação! Usuário não informado!");
+        }
+        Usuario usuario = usuarioRepo.findByNome(nomeUsuario);
+        if(usuario == null) {
+            throw new AnotacaoException("Não é possível criar anotação! Usuário não encontrado!");
+        }
+        anotacao.setUsuario(usuario);
+        return repo.save(anotacao);
+    }
+    
+}
+
+
+TESTE
+package br.gov.sp.fatec.projetotopicos.service;
+
+import java.util.List;
+
+import br.gov.sp.fatec.projetotopicos.entity.Anotacao;
+
+public interface TesteService {
+
+    public List<Anotacao> todas();
+
+    public List<Anotacao> buscarNoTexto(String texto);
+
+    public Anotacao salvar(Anotacao anotacao, String nomeUsuario);
+    
+}
+
+
+TESTE IMPL
+package br.gov.sp.fatec.projetotopicos.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.stereotype.Service;
+
+import br.gov.sp.fatec.projetotopicos.entity.Anotacao;
+import br.gov.sp.fatec.projetotopicos.entity.Usuario;
+import br.gov.sp.fatec.projetotopicos.repository.AnotacaoRepository;
+import br.gov.sp.fatec.projetotopicos.repository.UsuarioRepository;
+
+@Service
+public class TesteServiceImpl implements AnotacaoService {
+
+    @Autowired
+    private AnotacaoRepository repo;
+
+    @Autowired
+    private UsuarioRepository usuarioRepo;
+
+    @Override
+    public List<Anotacao> todas() {
+        return repo.findAll();
+    }
+
+    @Override
+    public List<Anotacao> buscarNoTexto(String texto) {
+        return repo.findByTextoContainsIgnoreCase(texto);
+    }
+
+    @PreAuthorize("isAuthenticated()")
+    @Override
+    public Anotacao salvar(Anotacao anotacao, String nomeUsuario) {
+        if(nomeUsuario == null ||
+                nomeUsuario.isBlank()) {
+            throw new AnotacaoException("Não é possível criar anotação! Usuário não informado!");
+        }
+        Usuario usuario = usuarioRepo.findByNome(nomeUsuario);
+        if(usuario == null) {
+            throw new AnotacaoException("Não é possível criar anotação! Usuário não encontrado!");
+        }
+        anotacao.setUsuario(usuario);
+        return repo.save(anotacao);
+    }
+    
+}
+
+BANCO DE DADOS
+Para um banco de dados poder rodar de forma correta, deve ser utilizado o arquivo .gitpod.yml e acresenta-lo na lista como no exemplo abaixo
+ports:
+  - port: 8080
+    visibility: public
+tasks:
+  - init: mysql < DDL.sql
+image: gitpod/workspace-mysql
+
+com modificaçao
+ports:
+  - port: 8080
+    visibility: public
+tasks:
+  - init: mysql < DDL.sql
+  - init: mysql < tabela.sql
+  - init: mysql < cidade.sql
+image: gitpod/workspace-mysql
+e depois so executar o comando no terminal
+

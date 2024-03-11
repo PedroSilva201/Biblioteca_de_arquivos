@@ -1,0 +1,15 @@
+exame dia 13
+caira no exame
+back-end e front-end
+algo que envolve ambos
+colsulta usando repository
+controller
+vue.js
+get e post com axios
+v-for, v-model, etc
+consulta, mexer no controle para criar uma nova rota, criar o vue
+
+NOTA: 
+
+nao cai mapeamento de tabelas
+05/12 terceira chance de back-end, valendo seis

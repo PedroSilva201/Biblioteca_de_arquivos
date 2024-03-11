@@ -1,0 +1,28 @@
+anote, isso e importante para o ambiente de trabalho tambem
+mapear um objeto no banco de dados
+
+list
+set
+eager
+lazy
+
+botao direito
+soucer action
+generete gets and sets
+
+qualquer item pode desalinhar o produto dentro do codigo
+no arquivo DDL.sql
+rodar
+mvm spring-boot run
+//ativaçao na porta 8080
+as demias portas sao relacionadas ao banco de dados(3306, 33060, 35729)
+loop infinito
+/usuario
+como gerar este json, faz select
+para impedir de fazer isso, @jsonignore
+atributo, nao gerara json
+resolver o problema usando jsonignore
+autorizaçoes que o usuario nao tem
+nao veio o atributo usuario
+mapeamento 
+banco de dados relacional possui relaçao com um mapeamento

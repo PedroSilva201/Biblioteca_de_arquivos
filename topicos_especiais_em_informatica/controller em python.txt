@@ -1,0 +1,5 @@
+BLUEPRINT
+mapear classes em rotas, nao repete codigo
+inserir no controller
+
+alohomora

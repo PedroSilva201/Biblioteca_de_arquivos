@@ -1,0 +1,9 @@
+metodo controller USUARIO
+criar usando m rest, request e crossorigin
+dentro do public class
+autowired
+postmapping criando uma rota
+dto, usa metodos geters e seters
+resouces e o local para a configuraçao de rotas
+
+pacote de segurançã (security)

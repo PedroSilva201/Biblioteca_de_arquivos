@@ -1,0 +1,22 @@
+mvn spring-boot:run
+
+videos importantes
+gitpod
+spring security
+
+topicos especiais em informatica
+entity
+mapeamento das tabelas princiapis do banco de uma classe (modelos)
+repository
+responsavel por exercitar as operaçoes de consulta no banco de dados
+service
+responsavel por executar as operaçoes de escrita no banco
+controller:
+responsavbel por acionar as pares respionsaveis pela regra de negicio e banco de dados a partir das views das rotas
+principais 
+rest controller = principal framework web bind anotation demarcar clçasses de controller
+crossdring psgfr
+request mapping mapear um idpoint para iuma classe
+httpmeth papiing mapear um endpoint para um modelo
+entrety demacar um entidade no banco
+autocirid permitir a injeçao de dependencias no spring-

@@ -1,0 +1,23 @@
+rodar o programa do back-end da seguinte forma:
+mvn spring-boot:run
+gp url 8080 (descobrir o hiperlink e colocar no main.js para a interconexao)
+
+front-end
+npm install (iniciar a aplicaçao em node/javascript)
+npm run serve (rodar o programa)
+
+se o nome da classe for funcionario, renomear de login para funcionarios, criar esta classe no front-end pelo controller
+estrutura, a mesma chamada
+chamada pela rota
+cada pagina devera ter ligaçao do axios (copiar e colar)
+exemplo: funcionario/nome
+
+Modificaçoes no Back-end
+criar uma determinada classe no controller
+
+Modificaçoes no Front-end
+criar uma classe no src com o complemento de view.vue
+alterar o app.vue, main.js e o index router.js para a implementaçao de novas rotas
+
+SE UTILIZAR O USUARIOS E FAZER ALGO EQUIVALENTE, DEVE USAR OS MESMOS PRINCIPRIOS
+DE ALTERAR O CODIGO FONTE DA PAGINA E IMPLEMENTAR A LISTAGEM DE USUARIOS
