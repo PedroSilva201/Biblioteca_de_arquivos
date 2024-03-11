@@ -14,9 +14,11 @@ Qulquer duvida de imediato poderá ser respondido por este formulário  <a href=
 
 Conteúdos de praticamente todas as disciplinas que eu fiz estão aqui, exceto itens de rascunho, anotações básicas, atividades não finalizadas ou não validadas e em alguns casos conteúdo que não poderá ser exibido por motivo de força maior, sobretudo dos autores originais de determinados arquivos.
 
-Em alguns casos será inserido conteúdo referente aos videos, que neste caso estarão disponiveis no meu drive para assistir (em breve).
+Em alguns casos será inserido conteúdo referente aos videos, que neste caso estarão disponiveis no meu drive para assistir.
+<br/>
 <a href="https://drive.google.com/file/d/1036yfEBV44gJmHXI88R3UJiZW-d88_Db/view?usp=sharing&t=7">Apresentação do Jogoteca (Trabalho de Segurança da Informação)</a>
 <br/>
 <a href="https://drive.google.com/file/d/1YiEKqyBt3VKIx2jHaEERybGcZtMF4_oT/view?usp=sharing&t=4">Como gravar uma maquina virtual utilizando o Debian</a>
 <br/>
 <a href="https://github.com/PedroSilva201"></a>
+A lista pode aumentar conforme a demanda dos interresados.
