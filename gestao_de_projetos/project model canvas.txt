@@ -1,0 +1,6 @@
+project model canvas de uma papelaria
+custo
+cronograma
+qualidade
+
+
